@@ -39,7 +39,7 @@ def clean_text(text, name=True, ):
 
 
 path1 = 'D:/nnu/大创/weibo_tour_sentiment_dict/2_PreProcessing/data/南京/txt/秦淮河.txt'
-path2 = 'C:/Users/yan/Desktop/大创/path3.txt'
+path2 = 'D:/nnu/大创/weibo_tour_sentiment_dict/2_PreProcessing/data/南京/txt/秦淮河输出.txt'
 f = open(path1, 'r', encoding='utf-8', errors='ignore')
 fw = open(path2, 'w', encoding='utf-8', errors='ignore')
 data = f.read()
