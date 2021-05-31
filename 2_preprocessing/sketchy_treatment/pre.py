@@ -1,7 +1,7 @@
 from re import sub, compile, UNICODE, IGNORECASE
 
 
-def clean_text(text, name=True, ):
+def clean_text(text):
     zh_puncts1 = "，；、。！？（）《》【】"  # 清除符号
     URL_REGEX = compile(
         r'(?i)((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>' + zh_puncts1 + ']+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:\'".,<>?«»“”‘’' + zh_puncts1 + ']))',
@@ -52,9 +52,4 @@ for line in f:
         if uchar != ' ':
             constr += uchar
     fw.write(constr + '\n')
-if __name__ == '__main__':
-    print(clean_text(
-        '回复@让我再看你一眼 //让我再看你一眼·:#高以翔[超话]# 以翔 这个点了睡意全无  节日现在对于我们就是一种悲伤  '
-        '没有了你世界都乱了 新冠肺炎疫情爆发让多少家庭除夕夜不能团聚  如果你在肯定会教我们正确的心态对待 会为逆行英雄'
-        '打call 会做慈善捐助  因为你是Godfrey@高以翔Godfrey @全世界最好的高以翔Godfrey 仙桃  显示地图 原图http://t.cn/Ir1YpaAb0'))
 '''
