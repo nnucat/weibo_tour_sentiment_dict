@@ -12,6 +12,17 @@ ht0 = HarvestText()
 fw = open(path4, 'w', encoding='utf-8', errors='ignore')
 fw.write(str(ht.seg(data, stopwords=stopwords,
                     return_sent=False)))
+words = ht.seg(data, stopwords=stopwords,
+               return_sent=False)
+
+
+counts = {}
+for word in words:
+    counts[word] = counts.get(word, 0) + 1
+items = list(counts.items())
+items.sort(key=lambda x: x[1], reverse=True)
+print(items)
+
 '''
 print(ht.seg(data, stopwords=stopwords,
              return_sent=True))  # return_sent=False时，则返回词语列表
