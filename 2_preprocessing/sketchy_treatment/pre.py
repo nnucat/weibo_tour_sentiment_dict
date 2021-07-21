@@ -38,8 +38,8 @@ def clean_text(text):
     return text.strip()
 
 
-path1 = 'D:/nnu/大创/weibo_tour_sentiment_dict/2_PreProcessing/data/南京/txt/秦淮河.txt'
-path2 = 'D:/nnu/大创/weibo_tour_sentiment_dict/2_PreProcessing/data/南京/txt/秦淮河输出.txt'
+path1 = 'D:/nnu/大创/weibo_tour_sentiment_dict/2_PreProcessing/data/南京/txt/美龄宫.txt'
+path2 = 'D:/nnu/大创/weibo_tour_sentiment_dict/2_PreProcessing/data/南京/txt/美龄宫输出.txt'
 f = open(path1, 'r', encoding='utf-8', errors='ignore')
 fw = open(path2, 'w', encoding='utf-8', errors='ignore')
 data = f.read()
